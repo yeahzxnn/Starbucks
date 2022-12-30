@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fOx-NA-L7a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1nO-2I-Q9K">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -49,18 +49,12 @@
                                 <state key="normal" title="다시보지 않기">
                                     <color key="titleColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <action selector="tapCloseButton:" destination="khN-DS-Lto" eventType="touchUpInside" id="Bxt-30-evj"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFl-zb-fta">
                                 <rect key="frame" x="353" y="793" width="40" height="30"/>
                                 <state key="normal" title="X 닫기">
                                     <color key="titleColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <action selector="tapCloseButton:" destination="khN-DS-Lto" eventType="touchUpInside" id="LWR-zv-UGU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -303,7 +297,7 @@
                                                     <constraint firstItem="Ka6-CE-DrI" firstAttribute="top" secondItem="Ggi-fV-mSK" secondAttribute="top" constant="11" id="wTP-dc-A5C"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-rG-J08">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-rG-J08" customClass="New" customModule="Starbucks" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="144" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="KNC-Dn-Nl5"/>
@@ -389,8 +383,7 @@
                     <tabBarItem key="tabBarItem" title="Order" image="cup.and.saucer.fill" catalog="system" id="PsZ-B4-tPF"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
-                        <outlet property="New" destination="BDa-rG-J08" id="Yee-st-T0x"/>
-                        <segue destination="1nO-2I-Q9K" kind="show" identifier="goToSecond" id="70f-h2-XZN"/>
+                        <outlet property="New" destination="BDa-rG-J08" id="aXp-Rg-aeb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pm-jw-dcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -482,7 +475,7 @@
         <!--ClickMenu-->
         <scene sceneID="ech-M8-QTR">
             <objects>
-                <viewController title="ClickMenu" id="1nO-2I-Q9K" customClass="SecondViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" title="ClickMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1nO-2I-Q9K" customClass="SecondViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wJa-4n-kcB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,24 +484,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Moa-49-Hdb">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1156"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1144"/>
                                         <subviews>
                                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-Mn-kwb">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <items>
                                                     <navigationItem id="spd-GD-2gi">
                                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="t1E-jq-gU6">
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </barButtonItem>
-                                                        <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="nug-na-pGe">
+                                                        <barButtonItem key="rightBarButtonItem" title="장바구니" id="nug-na-pGe">
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </barButtonItem>
                                                     </navigationItem>
                                                 </items>
                                             </navigationBar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-wN-fXx">
-                                                <rect key="frame" x="0.0" y="56" width="393" height="50"/>
+                                                <rect key="frame" x="0.0" y="44" width="393" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhM-kp-WLs">
                                                         <rect key="frame" x="19" y="1" width="78" height="40.666666666666664"/>
@@ -525,43 +518,43 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ToffeeNutLatte" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-Jb-bgt">
-                                                <rect key="frame" x="0.0" y="106" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="94" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="sGl-Vj-DrC"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcedToffeNutLatte" translatesAutoresizingMaskIntoConstraints="NO" id="nwR-Ft-Nlc">
-                                                <rect key="frame" x="0.0" y="256" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="244" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="sRa-4R-sgf"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuroraChamomileTeaRelaxer" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-wn-aJZ">
-                                                <rect key="frame" x="0.0" y="406" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="394" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="lRZ-ca-gU6"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcedAuroraChamomileTeaRelaxer" translatesAutoresizingMaskIntoConstraints="NO" id="Xgt-zJ-tgN">
-                                                <rect key="frame" x="0.0" y="556" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="544" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="6uu-C8-OK2"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SnowVanillaTeaLatte" translatesAutoresizingMaskIntoConstraints="NO" id="16M-r2-uOS">
-                                                <rect key="frame" x="0.0" y="706" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="694" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="7YM-Vm-oCw"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcedSnowVanillaTeaLatte" translatesAutoresizingMaskIntoConstraints="NO" id="Jfq-cG-4B9">
-                                                <rect key="frame" x="0.0" y="856" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="844" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="3k6-xv-uQq"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DolceStrawberryMilk" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-Qu-gAz">
-                                                <rect key="frame" x="0.0" y="1006" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="994" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="oLc-JC-01c"/>
                                                 </constraints>
@@ -590,26 +583,32 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mmh-CI-Jok"/>
-                    <size key="freeformSize" width="393" height="852"/>
+                    <size key="freeformSize" width="393" height="783"/>
                     <connections>
-                        <outlet property="ToffeeNutLatte" destination="1lN-Jb-bgt" id="yK3-3W-5o5"/>
-                        <segue destination="NsU-vh-CmZ" kind="show" identifier="goToThird" id="YpH-wO-OIp"/>
+                        <outlet property="AuroraChamomileTeaRelaxer" destination="h9z-wn-aJZ" id="WvJ-5v-hZF"/>
+                        <outlet property="DolceStrawberryMilk" destination="E0l-Qu-gAz" id="SyV-nk-iKI"/>
+                        <outlet property="IcedAuroraChamomileTeaRelaxer" destination="Xgt-zJ-tgN" id="u3G-VF-VQc"/>
+                        <outlet property="IcedSnowVanillaTeaLatte" destination="Jfq-cG-4B9" id="2u9-6E-IOF"/>
+                        <outlet property="IcedToffeNutLatte" destination="nwR-Ft-Nlc" id="3N7-4g-YnW"/>
+                        <outlet property="SnowVanillaTeaLatte" destination="16M-r2-uOS" id="TQG-v9-7mx"/>
+                        <outlet property="ToffeNutLatte" destination="1lN-Jb-bgt" id="Sht-Jj-iwq"/>
+                        <outlet property="shoppingBasket" destination="nug-na-pGe" id="9dz-7l-tOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQS-WA-yuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-373.28244274809157" y="869.71830985915494"/>
+            <point key="canvasLocation" x="-373.28244274809157" y="894.0140845070423"/>
         </scene>
         <!--MenuOrder-->
         <scene sceneID="bqB-cV-Nlg">
             <objects>
                 <viewController title="MenuOrder" id="NsU-vh-CmZ" customClass="ThirdViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1e-A4-cMs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpE-lv-vPc">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-8G-FhN">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
@@ -734,6 +733,9 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="baseBackgroundColor" red="0.2901961207" green="0.64313727620000005" blue="0.40784314269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Order:" destination="NsU-vh-CmZ" eventType="touchDown" id="Xpx-K1-kTe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -802,7 +804,7 @@
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="Button" destination="xFe-ae-Cdm" id="46Z-Up-nQ8"/>
-                        <segue destination="khN-DS-Lto" kind="show" identifier="goToFourth" id="Vyj-h4-hep"/>
+                        <outlet property="Order" destination="xFe-ae-Cdm" id="yWg-oT-V0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84a-5m-6B9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -812,9 +814,9 @@
         <!--DetaulOption-->
         <scene sceneID="tNv-kE-2Xe">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" title="DetaulOption" useStoryboardIdentifierAsRestorationIdentifier="YES" id="khN-DS-Lto" customClass="FourthViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FourthVC" title="DetaulOption" useStoryboardIdentifierAsRestorationIdentifier="YES" id="khN-DS-Lto" customClass="FourthViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBW-fY-qxH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문한 커피 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB0-uA-WmH">
@@ -864,22 +866,22 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nl-ji-17d">
-                                <rect key="frame" x="20" y="462" width="353" height="16"/>
+                                <rect key="frame" x="20" y="462" width="353" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2u1-Wj-IWE">
-                                        <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="30"/>
                                         <state key="normal" title="매장컵">
                                             <color key="titleColor" red="0.4196078479" green="0.4196078479" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-64-eNM">
-                                        <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="16"/>
+                                        <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="30"/>
                                         <state key="normal" title="개인컵">
                                             <color key="titleColor" red="0.4196078479" green="0.4196078479" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqs-eB-jD4">
-                                        <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="16"/>
+                                        <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="30"/>
                                         <state key="normal" title="일회용컵">
                                             <color key="titleColor" red="0.4196078479" green="0.4196078479" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -904,44 +906,44 @@
                                 </constraints>
                             </view>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5hl-9d-gCp">
-                                <rect key="frame" x="20" y="652" width="94" height="32"/>
+                                <rect key="frame" x="20" y="666" width="94" height="32"/>
                                 <connections>
-                                    <action selector="stepperValueChanged:" destination="khN-DS-Lto" eventType="valueChanged" id="q8S-qS-gG3"/>
+                                    <action selector="stepperValueChanged:" destination="khN-DS-Lto" eventType="valueChanged" id="iuK-Se-J2m"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e18-Tv-1yJ">
-                                <rect key="frame" x="154" y="657.66666666666663" width="11" height="21"/>
+                                <rect key="frame" x="154" y="671.66666666666663" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9n-CD-mim">
-                                <rect key="frame" x="336.66666666666669" y="655.33333333333337" width="36.333333333333314" height="25.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9n-CD-mim">
+                                <rect key="frame" x="359" y="669.33333333333337" width="14" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdG-zq-drE">
-                                <rect key="frame" x="20" y="783" width="176.66666666666666" height="0.0"/>
+                                <rect key="frame" x="20" y="797" width="176.66666666666666" height="21"/>
                                 <state key="normal" title="취소하기">
                                     <color key="titleColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapCloseButton:" destination="khN-DS-Lto" eventType="touchUpInside" id="66J-aw-0YC"/>
+                                    <action selector="tapCloseButton:" destination="khN-DS-Lto" eventType="touchUpInside" id="HXK-o9-tPV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uas-zu-7yK">
-                                <rect key="frame" x="196.66666666666663" y="783" width="176.33333333333337" height="0.0"/>
+                                <rect key="frame" x="196.66666666666663" y="797" width="176.33333333333337" height="21"/>
                                 <state key="normal" title="장바구니에 담기">
                                     <color key="titleColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapShoppingButton:" destination="khN-DS-Lto" eventType="touchUpInside" id="LxL-mx-lXF"/>
+                                    <action selector="tapShoppingButton:" destination="khN-DS-Lto" eventType="touchUpInside" id="6k4-gw-odf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="컵 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6St-K1-GBP">
-                                <rect key="frame" x="20.000000000000004" y="428" width="59.333333333333343" height="25.333333333333314"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="커피 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2K1-KK-Apd">
+                                <rect key="frame" x="0.0" y="72" width="393" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -958,13 +960,12 @@
                             <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" secondItem="oFQ-y7-mdd" secondAttribute="trailing" constant="20" id="6Ie-CG-eFc"/>
                             <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" secondItem="kB0-uA-WmH" secondAttribute="trailing" constant="20" id="6pU-xh-cSI"/>
                             <constraint firstItem="vdG-zq-drE" firstAttribute="top" secondItem="5hl-9d-gCp" secondAttribute="bottom" constant="99" id="97K-VE-fG2"/>
-                            <constraint firstItem="6St-K1-GBP" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="9a5-aQ-6Bv"/>
                             <constraint firstItem="uas-zu-7yK" firstAttribute="leading" secondItem="vdG-zq-drE" secondAttribute="trailing" id="9nf-GL-9DX"/>
                             <constraint firstItem="SlQ-EM-SaG" firstAttribute="top" secondItem="tWw-E9-ezf" secondAttribute="bottom" constant="40" id="Db0-7t-pi1"/>
                             <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" secondItem="8nl-ji-17d" secondAttribute="trailing" constant="20" id="FhC-Vs-3NL"/>
                             <constraint firstItem="tWw-E9-ezf" firstAttribute="height" secondItem="pxu-BU-ewf" secondAttribute="height" id="Hru-XJ-GI0"/>
                             <constraint firstItem="uas-zu-7yK" firstAttribute="leading" secondItem="vdG-zq-drE" secondAttribute="trailing" id="Hui-Hy-DyZ"/>
-                            <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6St-K1-GBP" secondAttribute="trailing" symbolic="YES" id="J96-RR-skM"/>
+                            <constraint firstItem="2K1-KK-Apd" firstAttribute="top" secondItem="ojx-Jv-mFc" secondAttribute="top" constant="13" id="K4s-CI-aim"/>
                             <constraint firstItem="tWw-E9-ezf" firstAttribute="width" secondItem="pxu-BU-ewf" secondAttribute="width" id="KK6-M4-NTi"/>
                             <constraint firstItem="8nl-ji-17d" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="KPE-pd-hpF"/>
                             <constraint firstItem="e18-Tv-1yJ" firstAttribute="leading" secondItem="5hl-9d-gCp" secondAttribute="trailing" constant="40" id="LlI-PD-hId"/>
@@ -975,9 +976,10 @@
                             <constraint firstItem="uas-zu-7yK" firstAttribute="width" secondItem="vdG-zq-drE" secondAttribute="width" id="R6C-G6-zUC"/>
                             <constraint firstItem="kB0-uA-WmH" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="RKu-6d-ihO"/>
                             <constraint firstItem="K9n-CD-mim" firstAttribute="centerY" secondItem="5hl-9d-gCp" secondAttribute="centerY" id="RON-eC-xxQ"/>
+                            <constraint firstItem="K9n-CD-mim" firstAttribute="leading" secondItem="e18-Tv-1yJ" secondAttribute="trailing" constant="194" id="RcM-MK-833"/>
                             <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" secondItem="K9n-CD-mim" secondAttribute="trailing" constant="20" id="TUl-h3-uc4"/>
-                            <constraint firstItem="6St-K1-GBP" firstAttribute="top" secondItem="pxu-BU-ewf" secondAttribute="bottom" constant="25.670000000000002" id="TZU-RU-pSj"/>
                             <constraint firstItem="SlQ-EM-SaG" firstAttribute="top" secondItem="pxu-BU-ewf" secondAttribute="bottom" constant="40" id="TaR-ce-iSw"/>
+                            <constraint firstItem="2K1-KK-Apd" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" id="VQL-ER-1HI"/>
                             <constraint firstItem="uas-zu-7yK" firstAttribute="bottom" secondItem="ojx-Jv-mFc" secondAttribute="bottom" id="XKS-AU-x7E"/>
                             <constraint firstItem="rKe-XN-E97" firstAttribute="width" secondItem="pxu-BU-ewf" secondAttribute="width" id="XkO-x0-0d0"/>
                             <constraint firstItem="Gc4-vh-8AA" firstAttribute="top" secondItem="oFQ-y7-mdd" secondAttribute="bottom" constant="40" id="YE2-3c-yLI"/>
@@ -987,6 +989,7 @@
                             <constraint firstItem="pxu-BU-ewf" firstAttribute="top" secondItem="Gc4-vh-8AA" secondAttribute="bottom" constant="18" id="g85-bg-izQ"/>
                             <constraint firstItem="tWw-E9-ezf" firstAttribute="leading" secondItem="rKe-XN-E97" secondAttribute="trailing" constant="6.3300000000000001" id="gYB-br-lYJ"/>
                             <constraint firstItem="tWw-E9-ezf" firstAttribute="leading" secondItem="rKe-XN-E97" secondAttribute="trailing" constant="6.3300000000000001" id="hsu-Qj-BVL"/>
+                            <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" secondItem="2K1-KK-Apd" secondAttribute="trailing" id="j2A-Pc-iTJ"/>
                             <constraint firstItem="ojx-Jv-mFc" firstAttribute="trailing" secondItem="uas-zu-7yK" secondAttribute="trailing" constant="20" id="mBn-vc-CTr"/>
                             <constraint firstItem="rKe-XN-E97" firstAttribute="leading" secondItem="pxu-BU-ewf" secondAttribute="trailing" constant="6.6699999999999999" id="mJi-hm-TzL"/>
                             <constraint firstItem="Gc4-vh-8AA" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="mnI-IF-jOw"/>
@@ -994,7 +997,6 @@
                             <constraint firstItem="oFQ-y7-mdd" firstAttribute="top" secondItem="kB0-uA-WmH" secondAttribute="bottom" constant="35" id="njJ-Sf-aNv"/>
                             <constraint firstItem="pxu-BU-ewf" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="pCW-56-FaG"/>
                             <constraint firstItem="vdG-zq-drE" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="s61-cO-TuS"/>
-                            <constraint firstItem="K9n-CD-mim" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e18-Tv-1yJ" secondAttribute="trailing" constant="8" symbolic="YES" id="sue-bv-bBW"/>
                             <constraint firstItem="SlQ-EM-SaG" firstAttribute="leading" secondItem="ojx-Jv-mFc" secondAttribute="leading" constant="20" id="t7o-oo-Vex"/>
                             <constraint firstItem="kB0-uA-WmH" firstAttribute="top" secondItem="ojx-Jv-mFc" secondAttribute="top" constant="45" id="voL-0K-re7"/>
                             <constraint firstItem="rKe-XN-E97" firstAttribute="leading" secondItem="pxu-BU-ewf" secondAttribute="trailing" constant="6.6699999999999999" id="wec-k3-WaJ"/>
@@ -1005,48 +1007,37 @@
                     <navigationItem key="navigationItem" id="jsA-e2-d9W"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
-                        <outlet property="CupChooseView" destination="fBW-fY-qxH" id="tOc-df-Oay"/>
-                        <outlet property="GrandeSize" destination="rKe-XN-E97" id="eJg-dt-ex7"/>
-                        <outlet property="Hall" destination="2u1-Wj-IWE" id="jwX-LB-AVe"/>
-                        <outlet property="Slogan" destination="oFQ-y7-mdd" id="lIJ-Rb-vzT"/>
-                        <outlet property="Tall" destination="pxu-BU-ewf" id="7ph-8m-8GS"/>
-                        <outlet property="TallSize" destination="pxu-BU-ewf" id="2Bm-Lt-3jE"/>
-                        <outlet property="VentiSize" destination="tWw-E9-ezf" id="XdE-MB-IkS"/>
-                        <outlet property="bthGrande" destination="rKe-XN-E97" id="wcR-Iy-d3i"/>
-                        <outlet property="bthTall" destination="pxu-BU-ewf" id="qaj-4R-r95"/>
-                        <outlet property="btnGrande" destination="rKe-XN-E97" id="luH-HJ-f9L"/>
-                        <outlet property="btnHall" destination="2u1-Wj-IWE" id="Cvg-y1-B1t"/>
-                        <outlet property="btnOne" destination="Bqs-eB-jD4" id="FHZ-S0-PvR"/>
-                        <outlet property="btnPerson" destination="0xG-64-eNM" id="lSl-nN-xNR"/>
-                        <outlet property="btnTall" destination="pxu-BU-ewf" id="GdU-fq-2zo"/>
-                        <outlet property="btnVenti" destination="tWw-E9-ezf" id="smd-79-Chz"/>
+                        <outlet property="GrandeSize" destination="rKe-XN-E97" id="Bpn-4l-4bV"/>
+                        <outlet property="OnceUseCup" destination="Bqs-eB-jD4" id="HJH-KA-Gt4"/>
+                        <outlet property="PersonalCup" destination="0xG-64-eNM" id="Pa4-6k-e9d"/>
+                        <outlet property="ShopCup" destination="2u1-Wj-IWE" id="87O-DA-2KV"/>
+                        <outlet property="TallSize" destination="pxu-BU-ewf" id="8tm-h0-8lh"/>
+                        <outlet property="VentiSize" destination="tWw-E9-ezf" id="924-xP-WP0"/>
                         <outlet property="closeButton" destination="vdG-zq-drE" id="wgL-YS-B63"/>
-                        <outlet property="coffeName" destination="kB0-uA-WmH" id="8qB-Qm-oCG"/>
-                        <outlet property="cupChooseView" destination="8nl-ji-17d" id="yYI-Gy-QIx"/>
+                        <outlet property="coffeName" destination="2K1-KK-Apd" id="tD5-Wh-imC"/>
                         <outlet property="priceLabel" destination="K9n-CD-mim" id="pmj-XH-RvC"/>
                         <outlet property="shoppingButton" destination="uas-zu-7yK" id="3tc-Qr-PoI"/>
-                        <outlet property="stepper" destination="5hl-9d-gCp" id="E0I-rO-ZcJ"/>
+                        <outlet property="stepper" destination="5hl-9d-gCp" id="G5R-xX-fl1"/>
                         <outlet property="valueLabel" destination="e18-Tv-1yJ" id="id6-RP-MSe"/>
-                        <segue destination="6hn-cc-56u" kind="show" identifier="goToLast" id="M7w-nY-LHx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCX-Kc-ZWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="870"/>
+            <point key="canvasLocation" x="-373" y="1556"/>
         </scene>
         <!--Cart-->
         <scene sceneID="o1S-cD-vCK">
             <objects>
-                <viewController title="Cart" id="6hn-cc-56u" customClass="LastViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LastVC" title="Cart" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6hn-cc-56u" customClass="LastViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGO-61-t5k">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1u-nx-Wxr">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-sz-eBo">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1488"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1512"/>
                                         <subviews>
                                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-3n-dBe">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
@@ -1057,6 +1048,9 @@
                                                     <navigationItem title="장바구니" id="YQh-jA-f11">
                                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="rJ3-cQ-Qfi">
                                                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <connections>
+                                                                <action selector="didTapNavigationBack:" destination="6hn-cc-56u" id="zbn-qb-23v"/>
+                                                            </connections>
                                                         </barButtonItem>
                                                     </navigationItem>
                                                 </items>
@@ -1397,7 +1391,24 @@
                                                     <constraint firstAttribute="trailing" secondItem="Dh7-ud-A5e" secondAttribute="trailing" constant="6" id="t0i-VW-EJc"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2m-h4-Pak">
+                                                <rect key="frame" x="0.0" y="1488" width="393" height="24"/>
+                                                <color key="backgroundColor" red="0.32156863810000003" green="0.52549022440000004" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="결제하기" image="wonsign.circle.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapPayment:" destination="6hn-cc-56u" eventType="touchUpInside" id="9mV-Ed-Y5F"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="w2m-h4-Pak" secondAttribute="trailing" id="T3w-qi-qXi"/>
+                                            <constraint firstItem="w2m-h4-Pak" firstAttribute="leading" secondItem="hWr-sz-eBo" secondAttribute="leading" id="qh2-qC-eWF"/>
+                                            <constraint firstAttribute="bottom" secondItem="w2m-h4-Pak" secondAttribute="bottom" id="uST-FB-cIv"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -1422,10 +1433,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="eXP-Jh-9Vi"/>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="Cart1" destination="aSo-K0-Qet" id="BPL-ik-Tbc"/>
+                        <outlet property="CartNavigationBar" destination="Qwe-3n-dBe" id="IB0-Yh-N0j"/>
+                        <outlet property="EraseButtonToffeNutLatte" destination="jii-qv-v8E" id="eRU-jK-vxK"/>
+                        <outlet property="ToffeNutLatte" destination="Oie-NT-AIc" id="bbi-Tu-p0U"/>
+                        <outlet property="coffeeNameToffeNutLatte" destination="jfB-j3-3Sd" id="4FR-gW-cvC"/>
+                        <outlet property="coffeePriceToffeNutLatte" destination="Xc3-0h-tBu" id="skd-Zq-5CE"/>
+                        <outlet property="payment" destination="w2m-h4-Pak" id="MBE-w7-URf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5c-CK-wLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791.6030534351144" y="869.71830985915494"/>
+            <point key="canvasLocation" x="352" y="1556"/>
         </scene>
     </scenes>
     <resources>
@@ -1467,6 +1487,7 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="sparkle" catalog="system" width="128" height="119"/>
+        <image name="wonsign.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
