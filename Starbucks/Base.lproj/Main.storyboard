@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DrQ-MA-D8e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fOx-NA-L7a">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--첫 화면-->
+        <!--FirstScreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="첫 화면" id="BYZ-38-t0r" customClass="ViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FirstScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="834" y="-692"/>
         </scene>
-        <!--1. 홈 탭-->
+        <!--Home-->
         <scene sceneID="WME-m0-pFN">
             <objects>
-                <viewController title="1. 홈 탭" id="gax-P1-Cli" sceneMemberID="viewController">
+                <viewController title="Home" id="gax-P1-Cli" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lmq-ZT-Mdy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="-1570.2290076335878" y="73.943661971830991"/>
         </scene>
-        <!--2. 페이 탭-->
+        <!--Pay-->
         <scene sceneID="sXo-ur-Eiz">
             <objects>
-                <viewController title="2. 페이 탭" id="tBr-MH-Z5X" sceneMemberID="viewController">
+                <viewController title="Pay" id="tBr-MH-Z5X" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q5H-Ab-3H7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-498.47328244274809" y="73.943661971830991"/>
         </scene>
-        <!--3. 주문 탭-->
+        <!--Order-->
         <scene sceneID="Vba-tn-D68">
             <objects>
-                <viewController title="3. 주문 탭" id="fOx-NA-L7a" sceneMemberID="viewController">
+                <viewController title="Order" id="fOx-NA-L7a" customClass="ViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dnH-qM-FDp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,7 +303,7 @@
                                                     <constraint firstItem="Ka6-CE-DrI" firstAttribute="top" secondItem="Ggi-fV-mSK" secondAttribute="top" constant="11" id="wTP-dc-A5C"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1111" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-rG-J08">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New" translatesAutoresizingMaskIntoConstraints="NO" id="BDa-rG-J08">
                                                 <rect key="frame" x="0.0" y="144" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="KNC-Dn-Nl5"/>
@@ -388,15 +388,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Order" image="cup.and.saucer.fill" catalog="system" id="PsZ-B4-tPF"/>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="New" destination="BDa-rG-J08" id="Yee-st-T0x"/>
+                        <segue destination="1nO-2I-Q9K" kind="show" identifier="goToSecond" id="70f-h2-XZN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pm-jw-dcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516.79389312977094" y="73.943661971830991"/>
         </scene>
-        <!--4. 샵 탭-->
+        <!--Shop-->
         <scene sceneID="Rf2-ex-bfm">
             <objects>
-                <viewController title="4. 샵 탭" id="9mL-Us-ylY" sceneMemberID="viewController">
+                <viewController title="Shop" id="9mL-Us-ylY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N6j-ci-YUd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,10 +438,10 @@
             </objects>
             <point key="canvasLocation" x="1530.534351145038" y="73.943661971830991"/>
         </scene>
-        <!--5. 기타 탭-->
+        <!--Other-->
         <scene sceneID="D3f-4m-sag">
             <objects>
-                <viewController title="5. 기타 탭" id="cii-Tf-zLY" sceneMemberID="viewController">
+                <viewController title="Other" id="cii-Tf-zLY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XZ-mL-irk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,22 +479,22 @@
             </objects>
             <point key="canvasLocation" x="2455.7251908396947" y="73.943661971830991"/>
         </scene>
-        <!--2-1.NEW메뉴-->
+        <!--ClickMenu-->
         <scene sceneID="ech-M8-QTR">
             <objects>
-                <viewController title="2-1.NEW메뉴" id="1nO-2I-Q9K" sceneMemberID="viewController">
+                <viewController title="ClickMenu" id="1nO-2I-Q9K" customClass="SecondViewController" customModule="Starbucks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wJa-4n-kcB">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TP9-2C-h5q">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Moa-49-Hdb">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1144"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1156"/>
                                         <subviews>
                                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-Mn-kwb">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <items>
                                                     <navigationItem id="spd-GD-2gi">
@@ -504,7 +508,7 @@
                                                 </items>
                                             </navigationBar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-wN-fXx">
-                                                <rect key="frame" x="0.0" y="44" width="393" height="50"/>
+                                                <rect key="frame" x="0.0" y="56" width="393" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhM-kp-WLs">
                                                         <rect key="frame" x="19" y="1" width="78" height="40.666666666666664"/>
@@ -520,44 +524,44 @@
                                                     <constraint firstAttribute="height" constant="50" id="rKh-OW-Bco"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1162" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-Jb-bgt">
-                                                <rect key="frame" x="0.0" y="94" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ToffeeNutLatte" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-Jb-bgt">
+                                                <rect key="frame" x="0.0" y="106" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="sGl-Vj-DrC"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1162 2" translatesAutoresizingMaskIntoConstraints="NO" id="nwR-Ft-Nlc">
-                                                <rect key="frame" x="0.0" y="244" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcedToffeNutLatte" translatesAutoresizingMaskIntoConstraints="NO" id="nwR-Ft-Nlc">
+                                                <rect key="frame" x="0.0" y="256" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="sRa-4R-sgf"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1162 3" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-wn-aJZ">
-                                                <rect key="frame" x="0.0" y="394" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AuroraChamomileTeaRelaxer" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-wn-aJZ">
+                                                <rect key="frame" x="0.0" y="406" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="lRZ-ca-gU6"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1162 4" translatesAutoresizingMaskIntoConstraints="NO" id="Xgt-zJ-tgN">
-                                                <rect key="frame" x="0.0" y="544" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcedAuroraChamomileTeaRelaxer" translatesAutoresizingMaskIntoConstraints="NO" id="Xgt-zJ-tgN">
+                                                <rect key="frame" x="0.0" y="556" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="6uu-C8-OK2"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1163" translatesAutoresizingMaskIntoConstraints="NO" id="16M-r2-uOS">
-                                                <rect key="frame" x="0.0" y="694" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SnowVanillaTeaLatte" translatesAutoresizingMaskIntoConstraints="NO" id="16M-r2-uOS">
+                                                <rect key="frame" x="0.0" y="706" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="7YM-Vm-oCw"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1163 2" translatesAutoresizingMaskIntoConstraints="NO" id="Jfq-cG-4B9">
-                                                <rect key="frame" x="0.0" y="844" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcedSnowVanillaTeaLatte" translatesAutoresizingMaskIntoConstraints="NO" id="Jfq-cG-4B9">
+                                                <rect key="frame" x="0.0" y="856" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="3k6-xv-uQq"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1163 3" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-Qu-gAz">
-                                                <rect key="frame" x="0.0" y="994" width="393" height="150"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DolceStrawberryMilk" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-Qu-gAz">
+                                                <rect key="frame" x="0.0" y="1006" width="393" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="oLc-JC-01c"/>
                                                 </constraints>
@@ -585,22 +589,27 @@
                             <constraint firstAttribute="bottom" secondItem="TP9-2C-h5q" secondAttribute="bottom" id="j9V-XP-uDU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Mmh-CI-Jok"/>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="ToffeeNutLatte" destination="1lN-Jb-bgt" id="yK3-3W-5o5"/>
+                        <segue destination="NsU-vh-CmZ" kind="show" identifier="goToThird" id="YpH-wO-OIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQS-WA-yuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-373.28244274809157" y="869.71830985915494"/>
         </scene>
-        <!--2-2.주문하기-->
+        <!--MenuOrder-->
         <scene sceneID="bqB-cV-Nlg">
             <objects>
-                <viewController title="2-2.주문하기" id="NsU-vh-CmZ" sceneMemberID="viewController">
+                <viewController title="MenuOrder" id="NsU-vh-CmZ" customClass="ThirdViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1e-A4-cMs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpE-lv-vPc">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-8G-FhN">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
@@ -789,18 +798,23 @@
                             <constraint firstItem="FpE-lv-vPc" firstAttribute="trailing" secondItem="niH-L0-I6f" secondAttribute="trailing" id="gYk-oJ-yyP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f76-KX-Fcd"/>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="Button" destination="xFe-ae-Cdm" id="46Z-Up-nQ8"/>
+                        <segue destination="khN-DS-Lto" kind="show" identifier="goToFourth" id="Vyj-h4-hep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84a-5m-6B9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="351.90839694656489" y="869.71830985915494"/>
         </scene>
-        <!--2- 3.세부옵션-->
+        <!--DetaulOption-->
         <scene sceneID="tNv-kE-2Xe">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="khN-DS-Lto" customClass="2-3.세부옵션" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" title="DetaulOption" useStoryboardIdentifierAsRestorationIdentifier="YES" id="khN-DS-Lto" customClass="FourthViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBW-fY-qxH">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문한 커피 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB0-uA-WmH">
@@ -850,22 +864,22 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nl-ji-17d">
-                                <rect key="frame" x="20" y="462" width="353" height="30"/>
+                                <rect key="frame" x="20" y="462" width="353" height="16"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2u1-Wj-IWE">
-                                        <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="16"/>
                                         <state key="normal" title="매장컵">
                                             <color key="titleColor" red="0.4196078479" green="0.4196078479" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-64-eNM">
-                                        <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="30"/>
+                                        <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="16"/>
                                         <state key="normal" title="개인컵">
                                             <color key="titleColor" red="0.4196078479" green="0.4196078479" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqs-eB-jD4">
-                                        <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="30"/>
+                                        <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="16"/>
                                         <state key="normal" title="일회용컵">
                                             <color key="titleColor" red="0.4196078479" green="0.4196078479" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -890,25 +904,25 @@
                                 </constraints>
                             </view>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5hl-9d-gCp">
-                                <rect key="frame" x="20" y="666" width="94" height="32"/>
+                                <rect key="frame" x="20" y="652" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="khN-DS-Lto" eventType="valueChanged" id="q8S-qS-gG3"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e18-Tv-1yJ">
-                                <rect key="frame" x="154" y="671.66666666666663" width="11" height="21"/>
+                                <rect key="frame" x="154" y="657.66666666666663" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9n-CD-mim">
-                                <rect key="frame" x="336.66666666666669" y="669.33333333333337" width="36.333333333333314" height="25.333333333333371"/>
+                                <rect key="frame" x="336.66666666666669" y="655.33333333333337" width="36.333333333333314" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdG-zq-drE">
-                                <rect key="frame" x="20" y="797" width="176.66666666666666" height="21"/>
+                                <rect key="frame" x="20" y="783" width="176.66666666666666" height="0.0"/>
                                 <state key="normal" title="취소하기">
                                     <color key="titleColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -917,7 +931,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uas-zu-7yK">
-                                <rect key="frame" x="196.66666666666663" y="797" width="176.33333333333337" height="21"/>
+                                <rect key="frame" x="196.66666666666663" y="783" width="176.33333333333337" height="0.0"/>
                                 <state key="normal" title="장바구니에 담기">
                                     <color key="titleColor" red="0.3058823645" green="0.51372551919999998" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -988,13 +1002,23 @@
                             <constraint firstItem="8nl-ji-17d" firstAttribute="top" secondItem="SlQ-EM-SaG" secondAttribute="bottom" constant="19.670000000000002" id="zgP-KD-vTc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jsA-e2-d9W"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
+                        <outlet property="CupChooseView" destination="fBW-fY-qxH" id="tOc-df-Oay"/>
+                        <outlet property="GrandeSize" destination="rKe-XN-E97" id="eJg-dt-ex7"/>
+                        <outlet property="Hall" destination="2u1-Wj-IWE" id="jwX-LB-AVe"/>
+                        <outlet property="Slogan" destination="oFQ-y7-mdd" id="lIJ-Rb-vzT"/>
+                        <outlet property="Tall" destination="pxu-BU-ewf" id="7ph-8m-8GS"/>
+                        <outlet property="TallSize" destination="pxu-BU-ewf" id="2Bm-Lt-3jE"/>
+                        <outlet property="VentiSize" destination="tWw-E9-ezf" id="XdE-MB-IkS"/>
+                        <outlet property="bthGrande" destination="rKe-XN-E97" id="wcR-Iy-d3i"/>
+                        <outlet property="bthTall" destination="pxu-BU-ewf" id="qaj-4R-r95"/>
                         <outlet property="btnGrande" destination="rKe-XN-E97" id="luH-HJ-f9L"/>
                         <outlet property="btnHall" destination="2u1-Wj-IWE" id="Cvg-y1-B1t"/>
                         <outlet property="btnOne" destination="Bqs-eB-jD4" id="FHZ-S0-PvR"/>
                         <outlet property="btnPerson" destination="0xG-64-eNM" id="lSl-nN-xNR"/>
-                        <outlet property="btnTall" destination="pxu-BU-ewf" id="kA3-r3-loA"/>
+                        <outlet property="btnTall" destination="pxu-BU-ewf" id="GdU-fq-2zo"/>
                         <outlet property="btnVenti" destination="tWw-E9-ezf" id="smd-79-Chz"/>
                         <outlet property="closeButton" destination="vdG-zq-drE" id="wgL-YS-B63"/>
                         <outlet property="coffeName" destination="kB0-uA-WmH" id="8qB-Qm-oCG"/>
@@ -1003,22 +1027,23 @@
                         <outlet property="shoppingButton" destination="uas-zu-7yK" id="3tc-Qr-PoI"/>
                         <outlet property="stepper" destination="5hl-9d-gCp" id="E0I-rO-ZcJ"/>
                         <outlet property="valueLabel" destination="e18-Tv-1yJ" id="id6-RP-MSe"/>
+                        <segue destination="6hn-cc-56u" kind="show" identifier="goToLast" id="M7w-nY-LHx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCX-Kc-ZWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1112" y="870"/>
         </scene>
-        <!--2- 4.장바구니-->
+        <!--Cart-->
         <scene sceneID="o1S-cD-vCK">
             <objects>
-                <viewController id="6hn-cc-56u" customClass="2-4.장바구니" sceneMemberID="viewController">
+                <viewController title="Cart" id="6hn-cc-56u" customClass="LastViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGO-61-t5k">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1u-nx-Wxr">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-sz-eBo">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1488"/>
@@ -1395,6 +1420,7 @@
                             <constraint firstItem="n1u-nx-Wxr" firstAttribute="top" secondItem="bGO-61-t5k" secondAttribute="top" id="ZC5-cc-bej"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eXP-Jh-9Vi"/>
                     <size key="freeformSize" width="393" height="852"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5c-CK-wLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1403,18 +1429,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AuroraChamomileTeaRelaxer" width="375" height="128"/>
+        <image name="DolceStrawberryMilk" width="375" height="117"/>
         <image name="IMG_1068" width="375" height="615.33331298828125"/>
         <image name="IMG_1105 2" width="368" height="88.666664123535156"/>
         <image name="IMG_1105 3" width="363.33334350585938" height="89.333335876464844"/>
         <image name="IMG_1106" width="364.33334350585938" height="91"/>
-        <image name="IMG_1111" width="375" height="86"/>
-        <image name="IMG_1162" width="375" height="121.66666412353516"/>
-        <image name="IMG_1162 2" width="375" height="123"/>
-        <image name="IMG_1162 3" width="375" height="128"/>
-        <image name="IMG_1162 4" width="375" height="125.66666412353516"/>
-        <image name="IMG_1163" width="362.66665649414062" height="129"/>
-        <image name="IMG_1163 2" width="375" height="126"/>
-        <image name="IMG_1163 3" width="375" height="117"/>
         <image name="IMG_1169" width="375" height="93.666664123535156"/>
         <image name="IMG_1169 2" width="375" height="93"/>
         <image name="IMG_1173 3" width="160.66667175292969" height="172.66667175292969"/>
@@ -1430,10 +1450,16 @@
         <image name="IMG_1199" width="116" height="121.33333587646484"/>
         <image name="IMG_1199 2" width="108" height="122.33333587646484"/>
         <image name="IMG_1199 3" width="114.33333587646484" height="121"/>
-        <image name="IMG_1207" width="1125" height="2031"/>
+        <image name="IMG_1207" width="375" height="677"/>
         <image name="IMG_1208" width="375" height="668"/>
         <image name="IMG_1209" width="375" height="679.66668701171875"/>
         <image name="IMG_1210" width="375" height="679.66668701171875"/>
+        <image name="IcedAuroraChamomileTeaRelaxer" width="375" height="125.66666412353516"/>
+        <image name="IcedSnowVanillaTeaLatte" width="375" height="126"/>
+        <image name="IcedToffeNutLatte" width="375" height="123"/>
+        <image name="New" width="375" height="86"/>
+        <image name="SnowVanillaTeaLatte" width="362.66665649414062" height="129"/>
+        <image name="ToffeeNutLatte" width="375" height="121.66666412353516"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="creditcard" catalog="system" width="128" height="88"/>
