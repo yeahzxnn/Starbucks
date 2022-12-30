@@ -16,7 +16,7 @@
 		3587F738295AED4700A197C5 /* StarbucksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587F737295AED4700A197C5 /* StarbucksTests.swift */; };
 		3587F742295AED4700A197C5 /* StarbucksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587F741295AED4700A197C5 /* StarbucksUITests.swift */; };
 		3587F744295AED4700A197C5 /* StarbucksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587F743295AED4700A197C5 /* StarbucksUITestsLaunchTests.swift */; };
-		35D5507B295B102800176729 /* IMG_1106.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 35D5507A295B102800176729 /* IMG_1106.PNG */; };
+		35E1DBB1295ECBA6007A2452 /* IMG_1205.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E1DBB0295ECBA6007A2452 /* IMG_1205.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		3587F73D295AED4700A197C5 /* StarbucksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarbucksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3587F741295AED4700A197C5 /* StarbucksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksUITests.swift; sourceTree = "<group>"; };
 		3587F743295AED4700A197C5 /* StarbucksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		35D5507A295B102800176729 /* IMG_1106.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1106.PNG; sourceTree = "<group>"; };
+		35E1DBB0295ECBA6007A2452 /* IMG_1205.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1205.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				3587F724295AED4600A197C5 /* ViewController.swift */,
 				3587F726295AED4600A197C5 /* Main.storyboard */,
 				3587F729295AED4700A197C5 /* Assets.xcassets */,
-				35D5507A295B102800176729 /* IMG_1106.PNG */,
+				35E1DBB0295ECBA6007A2452 /* IMG_1205.jpg */,
 				3587F72B295AED4700A197C5 /* LaunchScreen.storyboard */,
 				3587F72E295AED4700A197C5 /* Info.plist */,
 			);
@@ -237,7 +237,7 @@
 				3587F72D295AED4700A197C5 /* LaunchScreen.storyboard in Resources */,
 				3587F72A295AED4700A197C5 /* Assets.xcassets in Resources */,
 				3587F728295AED4600A197C5 /* Main.storyboard in Resources */,
-				35D5507B295B102800176729 /* IMG_1106.PNG in Resources */,
+				35E1DBB1295ECBA6007A2452 /* IMG_1205.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
